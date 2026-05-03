@@ -1,11 +1,8 @@
-import sys
-sys.path.insert(1, 'D:\Programação\Pos\Python\POO')
-import Data
-import Usuario
-
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView, DetailView
 from .models import UsuarioModel
+
+from others import Data, Usuario
 from .forms import UsuarioForm
 
 
