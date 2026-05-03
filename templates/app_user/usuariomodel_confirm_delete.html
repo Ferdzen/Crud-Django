@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Excluir Usuário</title>
+
+    <link rel="stylesheet" href="{% static 'css/usuario_delete.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+        <a href="{% url 'usuario-list' %}">← Voltar</a>
+
+        <div class="title">
+            Confirmar Exclusão
+        </div>
+    </div>
+
+    <div class="warning">
+        ⚠️ Esta ação não pode ser desfeita.<br>
+        Tem certeza que deseja excluir este usuário?
+    </div>
+
+    <div class="user-info">
+
+        <div class="info-item">
+            <div class="label">Nome</div>
+            <div class="value">{{ object.nome }}</div>
+        </div>
+
+        <div class="info-item">
+            <div class="label">Sexo</div>
+            <div class="value">{{ object.sexo }}</div>
+        </div>
+
+        <div class="info-item">
+            <div class="label">Data de Nascimento</div>
+            <div class="value">{{ object.dtNasc }}</div>
+        </div>
+
+        <div class="info-item">
+            <div class="label">E-mail</div>
+            <div class="value">{{ object.email }}</div>
+        </div>
+
+        <div class="info-item">
+            <div class="label">Renda</div>
+            <div class="value">{{ object.renda }}</div>
+        </div>
+
+    </div>
+
+    <form action="." method="post">
+        {% csrf_token %}
+
+        <div class="actions">
+            <button type="submit" class="btn btn-danger">
+                Sim, excluir
+            </button>
+
+            <button type="button"
+                    class="btn btn-secondary"
+                    onclick="location.href = '{% url 'usuario-list' %}'">
+                Cancelar
+            </button>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

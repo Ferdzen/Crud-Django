@@ -1,0 +1,106 @@
+:root {
+    --bg: #E6EBF5;
+    --primary: #001C2E;
+    --secondary: #374460;
+    --white: #ffffff;
+    --danger: #d9534f;
+}
+
+/* BASE */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #E6EBF5, #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+.top-bar {
+    margin-bottom: 20px;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+.title {
+    font-size: 22px;
+    color: var(--primary);
+    margin-top: 10px;
+}
+
+/* FORM */
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* AÇÕES */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* BOTÕES */
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--secondary);
+}
+
+.btn-secondary {
+    background: #ccc;
+}
+
+.btn-secondary:hover {
+    background: #999;
+}

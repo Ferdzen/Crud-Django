@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizar Usuário</title>
+
+    <link rel="stylesheet" href="{% static 'css/usuario_detail.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="top-bar">
+        <a href="{% url 'usuario-list' %}">← Voltar</a>
+
+        <div class="title">
+            Detalhes do Usuário
+        </div>
+    </div>
+
+    <div class="user-info">
+
+        <div class="info-item">
+            <div class="label">Nome</div>
+            <div class="value">{{ object.nome }}</div>
+        </div>
+
+        <div class="info-item">
+            <div class="label">Sexo</div>
+            <div class="value">{{ object.sexo }}</div>
+        </div>
+
+        <div class="info-item">
+            <div class="label">Data de Nascimento</div>
+            <div class="value">{{ object.dtNasc }}</div>
+        </div>
+
+        <div class="info-item">
+            <div class="label">E-mail</div>
+            <div class="value">{{ object.email }}</div>
+        </div>
+
+        <div class="info-item">
+            <div class="label">Renda</div>
+            <div class="value">{{ object.renda }}</div>
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <a href="{% url 'usuario-update' pk=object.id %}" class="btn btn-primary">
+            Editar
+        </a>
+
+        <a href="{% url 'usuario-list' %}" class="btn btn-secondary">
+            Voltar
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

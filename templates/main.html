@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Principal</title>
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Menu Principal</h1>
+
+    <nav class="menu-navegacao">
+        <ul>
+            <li><a href="{% url 'usuario-list' %}">Gerenciar Usuários</a></li>
+        </ul>
+    </nav>
+
+    <button onclick="window.close()">Fechar Página</button>
+</div>
+
+</body>
+</html>
